@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Firm | ETA-style Acquisition Firm</title>
+  <meta name="description" content="Operator-led entrepreneurship-through-acquisition firm focused on resilient, service-led businesses in the lower middle market." />
+  <meta property="og:title" content="Your Firm | ETA-style Acquisition Firm" />
+  <meta property="og:description" content="Operator-led entrepreneurship-through-acquisition firm focused on resilient, service-led businesses in the lower middle market." />
+  <meta property="og:type" content="website" />
+  <meta name="color-scheme" content="light" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230b1d3a'/%3E%3Cpath d='M18 42 L32 16 L46 42 Z' fill='%23c9a227'/%3E%3C/svg%3E" />
+  <style>
+    /* ===============================
+       ETA-STYLE ONE-FILE WEBSITE
+       Edit the variables below to rebrand quickly
+       =============================== */
+    :root {
+      --brand-900: #0b1d3a;     /* deep navy */
+      --brand-700: #123a6a;     /* mid navy */
+      --accent-500: #c9a227;    /* muted gold */
+      --bg: #ffffff;
+      --fg: #0f172a;            /* slate-900 */
+      --muted: #475569;         /* slate-600 */
+      --border: #e2e8f0;        /* slate-200 */
+      --card: #f8fafc;          /* slate-50 */
+      --shadow: 0 10px 30px rgba(2,12,27,.08);
+      --radius: 16px;
+      --font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    }
+
+    html { scroll-behavior: smooth; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 var(--font-sans);
+      -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+    }
+    .container { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; height: auto; }
+    .btn { display: inline-block; padding: 12px 18px; border-radius: 999px; font-weight: 600; border: 1px solid transparent; transition: transform .04s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease; }
+    .btn:active { transform: translateY(1px); }
+    .btn.primary { background: var(--accent-500); color: #1f2937; }
+    .btn.primary:hover { filter: brightness(1.05); box-shadow: var(--shadow); }
+    .btn.ghost { border-color: rgba(255,255,255,.25); color: #fff; }
+    .btn.ghost:hover { background: rgba(255,255,255,.06); }
+    .btn.outline { border-color: var(--brand-900); color: var(--brand-900); }
+    .btn.outline:hover { background: #f1f5f9; }
+
+    /* Header */
+    header {
+      position: sticky; top: 0; z-index: 50; backdrop-filter: saturate(180%) blur(8px);
+      background: rgba(255,255,255,.8); border-bottom: 1px solid var(--border);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .brand { display:flex; align-items:center; gap:12px; font-weight: 800; letter-spacing: .2px; }
+    .brand-mark { width: 28px; height: 28px; border-radius: 8px; background: var(--brand-900); display:grid; place-items:center; }
+    .brand-mark svg { width: 18px; height: 18px; }
+    nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 24px; align-items: center; }
+    nav a { color: var(--muted); font-weight: 600; }
+    nav a:hover { color: var(--brand-900); }
+
+    .mobile-toggle { display:none; background: transparent; border: 0; padding: 8px; }
+    .mobile-menu { display:none; border-top: 1px solid var(--border); }
+    .mobile-menu.open { display:block; }
+    .mobile-menu a { display:block; padding: 12px 0; color: var(--muted); }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(160deg, var(--brand-900), #0e264b 50%, #0b1d3a);
+      color: #fff; position: relative; isolation: isolate; overflow:hidden;
+    }
+    .hero::after { content:""; position:absolute; inset:-40% -10% auto auto; width:70vw; height:70vw; background: radial-gradient(closest-side, rgba(255,255,255,.09), transparent 70%); border-radius:50%; z-index:-1; }
+    .hero .inner { display:grid; grid-template-columns: 1.15fr .85fr; gap: 40px; padding: 96px 0; }
+    .eyebrow { color: rgba(255,255,255,.7); font-weight:700; letter-spacing:.14em; text-transform:uppercase; font-size:.8rem; }
+    h1 { font-size: clamp(34px, 6vw, 56px); line-height: 1.1; margin: 10px 0 16px; }
+    .lead { font-size: clamp(16px, 2.2vw, 20px); color: rgba(255,255,255,.85); max-width: 56ch; }
+    .hero-ctas { display:flex; gap: 12px; margin-top: 22px; }
+    .hero-caps { display:flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+    .cap { padding: 6px 10px; border-radius: 999px; font-weight: 600; font-size: 13px; background: rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.16); }
+
+    .hero-card { align-self:center; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.18); border-radius: var(--radius); padding: 22px; box-shadow: 0 10px 40px rgba(0,0,0,.25); }
+    .hero-card h3 { margin: 0 0 8px; font-size: 18px; }
+    .hero-card p { margin: 0; color: rgba(255,255,255,.85); }
+
+    /* Sections */
+    section { padding: 80px 0; }
+    .section-title { font-size: clamp(24px, 3.2vw, 36px); line-height:1.15; margin: 0 0 14px; }
+    .section-lead { color: var(--muted); max-width: 62ch; margin: 0 0 24px; }
+    .grid-3 { display:grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .grid-2 { display:grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow); }
+    .card h3 { margin: 0 0 8px; font-size: 18px; color: var(--brand-900); }
+    .card p { margin: 0; color: var(--muted); }
+    .list { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+    .list li { display:flex; align-items: flex-start; gap: 10px; }
+    .list svg { flex: 0 0 auto; margin-top: 2px; }
+
+    /* Portfolio */
+    .logo-grid { display:grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .logo { border: 1px solid var(--border); background:#fff; border-radius: 12px; padding: 18px; display:grid; place-items:center; height: 92px; box-shadow: var(--shadow); }
+
+    /* Team */
+    .team { display:grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .person { display:grid; grid-template-columns: 86px 1fr; gap: 16px; align-items:center; border: 1px solid var(--border); background: #fff; border-radius: var(--radius); padding: 16px; box-shadow: var(--shadow); }
+    .avatar { width: 86px; height: 86px; border-radius: 12px; background: linear-gradient(145deg, #e2e8f0, #f8fafc); display:grid; place-items:center; font-weight: 800; color: var(--brand-900); }
+    .person h4 { margin: 0 0 4px; font-size: 18px; }
+    .person p { margin: 0; color: var(--muted); }
+    .person a { color: var(--brand-700); font-weight: 600; }
+
+    /* Contact */
+    .contact { display:grid; grid-template-columns: 1.2fr .8fr; gap: 18px; }
+    .contact .card { padding: 24px; }
+    .kv { display:grid; grid-template-columns: 160px 1fr; gap: 8px; align-items: center; }
+    .kv strong { color: var(--brand-900); }
+
+    /* Footer */
+    footer { border-top: 1px solid var(--border); padding: 28px 0; color: var(--muted); }
+
+    /* Responsive */
+    @media (max-width: 960px) {
+      .hero .inner { grid-template-columns: 1fr; padding: 80px 0; }
+      .grid-3 { grid-template-columns: 1fr; }
+      .grid-2 { grid-template-columns: 1fr; }
+      .logo-grid { grid-template-columns: repeat(2, 1fr); }
+      .team { grid-template-columns: 1fr; }
+      .contact { grid-template-columns: 1fr; }
+      nav ul { display:none; }
+      .mobile-toggle { display:block; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+  <header aria-label="Main">
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Your Firm Home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 16L12 4l6 12H6Z" fill="#c9a227"/>
+          </svg>
+        </span>
+        <span>YOUR FIRM</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="#thesis">Thesis</a></li>
+          <li><a href="#criteria">Criteria</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#team">Team</a></li>
+        </ul>
+      </nav>
+      <div style="display:flex; align-items:center; gap:10px;">
+        <a class="btn outline" href="#contact">Contact</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Toggle menu">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" stroke="#0b1d3a" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="mobile-menu" role="region" aria-label="Mobile menu">
+      <div class="container">
+        <a href="#thesis">Thesis</a>
+        <a href="#criteria">Criteria</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#team">Team</a>
+        <a class="btn outline" style="margin: 8px 0 16px;" href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero" aria-label="Hero">
+      <div class="container inner">
+        <div>
+          <div class="eyebrow">Entrepreneurship Through Acquisition</div>
+          <h1>We acquire and build enduring small businesses</h1>
+          <p class="lead">Operator-led capital with a long-term orientation. We partner with owners to protect legacy, invest in people, and compound cash flows over decades, not quarters.</p>
+          <div class="hero-ctas">
+            <a class="btn primary" href="#criteria">See Criteria</a>
+            <a class="btn ghost" href="#contact">Get in touch</a>
+          </div>
+          <div class="hero-caps" aria-label="Highlights">
+            <span class="cap">Lower middle market</span>
+            <span class="cap">Service & light industrial</span>
+            <span class="cap">Succession-friendly</span>
+            <span class="cap">Operator-led</span>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="At a glance">
+          <h3>What we look for</h3>
+          <p>Recurring revenue, mission-critical services, strong margins, and opportunities to professionalize.</p>
+          <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px; margin-top:14px;">
+            <div class="card" style="background:rgba(255,255,255,.08); border-color:rgba(255,255,255,.18);">
+              <h3 style="color:#fff;">$3–30M</h3>
+              <p>Revenue</p>
+            </div>
+            <div class="card" style="background:rgba(255,255,255,.08); border-color:rgba(255,255,255,.18);">
+              <h3 style="color:#fff;">$1–5M</h3>
+              <p>EBITDA</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="thesis" aria-label="Investment Thesis">
+      <div class="container">
+        <h2 class="section-title">A patient, operator-first approach</h2>
+        <p class="section-lead">We buy great small companies from founders and families, protect what makes them special, and compound value through disciplined operations, technology enablement, and thoughtful tuck-ins.</p>
+        <div class="grid-3" role="list">
+          <div class="card" role="listitem">
+            <h3>Protect the core</h3>
+            <p>Keep what works: people-first culture, quality, and customer relationships. No playbook-forcing.</p>
+          </div>
+          <div class="card" role="listitem">
+            <h3>Systems & data</h3>
+            <p>Implement simple KPIs, clean financials, and pragmatic digital tools to elevate decision-making.</p>
+          </div>
+          <div class="card" role="listitem">
+            <h3>Disciplined growth</h3>
+            <p>Organic initiatives first—pricing, cross-sell, capacity—then selective tuck-ins to widen the moat.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="criteria" aria-label="Investment Criteria" style="background: linear-gradient(180deg,#fff,#f8fafc);">
+      <div class="container">
+        <h2 class="section-title">Investment criteria</h2>
+        <p class="section-lead">We focus on resilient, niche leaders with sticky customers and clear lanes for operational improvement.</p>
+        <div class="grid-3">
+          <div class="card">
+            <h3>Financials</h3>
+            <ul class="list">
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12l4 4L19 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Revenue: $3–30M</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12l4 4L19 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>EBITDA: $1–5M</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12l4 4L19 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Margin stability & cash conversion</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Business profile</h3>
+            <ul class="list">
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12l4 4L19 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Mission‑critical services or light industrial</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12l4 4L19 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Recurring or repeat revenue</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12l4 4L19 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Low customer concentration preferred</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Situations</h3>
+            <ul class="list">
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12l4 4L19 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Founder succession / retirement</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12l4 4L19 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Corporate carve‑outs</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12l4 4L19 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Partnership capital for growth</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" aria-label="Portfolio">
+      <div class="container">
+        <h2 class="section-title">Select focus areas</h2>
+        <p class="section-lead">Examples of the types of companies we pursue. Replace these with your actual portfolio when available.</p>
+        <div class="logo-grid" role="list">
+          <div class="logo" role="listitem" aria-label="Metal Fabrication">
+            <svg width="120" height="36" viewBox="0 0 240 72" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="4" y="16" width="44" height="40" rx="6" fill="#0b1d3a"/><path d="M16 44l10-16 10 16H16z" fill="#c9a227"/><text x="64" y="46" font-family="Segoe UI, Arial" font-size="22" fill="#0b1d3a">Acme Fabrication</text></svg>
+          </div>
+          <div class="logo" role="listitem" aria-label="Logistics Services">
+            <svg width="120" height="36" viewBox="0 0 240 72" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="4" y="16" width="44" height="40" rx="6" fill="#0b1d3a"/><circle cx="26" cy="36" r="9" fill="#c9a227"/><text x="64" y="46" font-family="Segoe UI, Arial" font-size="22" fill="#0b1d3a">Summit Logistics</text></svg>
+          </div>
+          <div class="logo" role="listitem" aria-label="Specialty Maintenance">
+            <svg width="120" height="36" viewBox="0 0 240 72" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="4" y="16" width="44" height="40" rx="6" fill="#0b1d3a"/><path d="M14 48h24v-6H14v6zm0-12h24v-6H14v6z" fill="#c9a227"/><text x="64" y="46" font-family="Segoe UI, Arial" font-size="22" fill="#0b1d3a">Prime Maintenance</text></svg>
+          </div>
+          <div class="logo" role="listitem" aria-label="Testing Services">
+            <svg width="120" height="36" viewBox="0 0 240 72" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="4" y="16" width="44" height="40" rx="6" fill="#0b1d3a"/><path d="M14 52l9-24 7 16 6-10 2 18H14z" fill="#c9a227"/><text x="64" y="46" font-family="Segoe UI, Arial" font-size="22" fill="#0b1d3a">Pinnacle Testing</text></svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="team" aria-label="Team" style="background: linear-gradient(180deg,#fff,#f8fafc);">
+      <div class="container">
+        <h2 class="section-title">Team</h2>
+        <p class="section-lead">Operator-investors with a bias for action, humility, and long-term partnership.</p>
+        <div class="team">
+          <div class="person">
+            <div class="avatar" aria-hidden="true">KF</div>
+            <div>
+              <h4>Kelly Founder</h4>
+              <p>Managing Partner. Ex-operator in light industrial services; MBA.
+              </p>
+              <p><a href="#" aria-label="LinkedIn for Kelly">LinkedIn →</a></p>
+            </div>
+          </div>
+          <div class="person">
+            <div class="avatar" aria-hidden="true">OP</div>
+            <div>
+              <h4>Owen Partner</h4>
+              <p>Partner. M&A and integration. Focus on pricing, systems, and tuck-ins.</p>
+              <p><a href="#" aria-label="LinkedIn for Owen">LinkedIn →</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" aria-label="Contact">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-lead">We’re always happy to speak with owners, brokers, and prospective operators. Email us directly or book a call.</p>
+        <div class="contact">
+          <div class="card">
+            <div class="kv"><strong>Email</strong><span><a id="emailLink" href="#">hello [at] yourdomain [dot] com</a></span></div>
+            <div class="kv"><strong>Location</strong><span>Philadelphia, PA • Dallas, TX (flexible)</span></div>
+            <div class="kv"><strong>Calendly</strong><span><a href="#">Book a 20‑min intro →</a></span></div>
+          </div>
+          <div class="card" style="background: var(--brand-900); color:#fff;">
+            <h3 style="margin-top:0;">Selling your business?</h3>
+            <p style="margin:0 0 14px; color:rgba(255,255,255,.9);">We offer a confidential, no‑obligation conversation within 24 hours. We’ll listen, learn your goals, and share whether we’re a fit.
+            </p>
+            <a class="btn ghost" href="#">Start a conversation</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap;">
+      <div>© <span id="year"></span> Your Firm. All rights reserved.</div>
+      <div style="display:flex; gap:14px;">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const toggle = document.getElementById('mobileToggle');
+    const menu = document.getElementById('mobileMenu');
+    if (toggle) {
+      toggle.addEventListener('click', () => {
+        const open = menu.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(open));
+      });
+    }
+
+    // Dynamic year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Email obfuscation (reduce simple scraping)
+    (function(){
+      const user = 'hello';
+      const domain = 'yourdomain.com';
+      const el = document.getElementById('emailLink');
+      const addr = user + '@' + domain;
+      el.textContent = addr;
+      el.href = 'mailto:' + addr + '?subject=Introduction%20from%20Website';
+    })();
+  </script>
+</body>
+</html>
