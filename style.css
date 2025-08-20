@@ -1,0 +1,265 @@
+/* ========== Corporate Theme (clean + professional) ========== */
+:root{
+  --brand-900:#012a5e; --brand-800:#073c84; --brand-700:#0a4ea8;
+  --accent-500:#1a73e8;
+  --bg:#ffffff; --fg:#0f172a; --muted:#475569;
+  --border:#e2e8f0; --card:#ffffff; --shadow:0 12px 34px rgba(2,12,27,.08);
+  --radius:14px;
+  --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+html{scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 var(--font);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;height:auto;display:block}
+.container{max-width:1180px;margin:0 auto;padding:0 24px}
+
+/* Header */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--border)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{display:flex;align-items:center;gap:12px;color:var(--brand-900)}
+.brand-logo{height:30px;width:auto;object-fit:contain;display:block}
+.brand-word{font-weight:800;letter-spacing:.08em;white-space:nowrap}
+nav ul{list-style:none;margin:0;padding:0;display:flex;gap:26px;align-items:center}
+nav a{color:#1f2937;font-weight:700;letter-spacing:.02em}
+nav a:hover{color:var(--brand-700)}
+.top-cta{display:flex;align-items:center;gap:12px}
+.btn{display:inline-block;padding:12px 18px;border-radius:999px;font-weight:700;border:1px solid transparent;transition:transform .04s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease}
+.btn:active{transform:translateY(1px)}
+.btn.primary{background:var(--accent-500);color:#fff}
+.btn.primary:hover{filter:brightness(1.05);box-shadow:var(--shadow)}
+.btn.outline{border-color:var(--brand-900);color:var(--brand-900)}
+.btn.outline:hover{background:#f1f5f9}
+.mobile-toggle{display:none;background:transparent;border:0;padding:8px}
+.mobile-menu{display:none;border-top:1px solid var(--border)}
+.mobile-menu.open{display:block}
+.mobile-menu a{display:block;padding:12px 0;color:var(--muted)}
+
+/* Hero */
+.hero{position:relative;isolation:isolate;color:#fff;background:linear-gradient(140deg,var(--brand-900),var(--brand-800) 50%,var(--brand-900));overflow:hidden}
+.hero::after{content:"";position:absolute;inset:-30% -10% auto auto;width:70vw;height:70vw;background:radial-gradient(closest-side,rgba(255,255,255,.12),transparent 70%);border-radius:50%;z-index:-1}
+.hero .inner{display:grid;grid-template-columns:1fr;gap:44px;padding:96px 0}
+.eyebrow{color:rgba(255,255,255,.8);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:.8rem}
+h1{font-size:clamp(34px,6vw,54px);line-height:1.08;margin:10px 0 18px}
+.lead{font-size:clamp(16px,2.2vw,20px);color:rgba(255,255,255,.92);max-width:62ch}
+.hero-ctas{display:flex;gap:12px;margin-top:20px}
+.fact-band{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
+.fact{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.2);border-radius:14px;padding:16px 18px}
+.fact b{display:block;font-size:22px;color:#fff}
+
+/* Three highlight chips */
+.owner-highlights{margin-top:18px;display:grid;gap:12px;grid-template-columns:repeat(3,minmax(0,1fr))}
+.highlight{display:grid;grid-template-columns:26px 1fr;gap:10px;align-items:start;background:rgba(6,28,64,.55);border:1px solid rgba(255,255,255,.22);border-radius:14px;padding:16px 14px;backdrop-filter:saturate(140%) blur(2px)}
+.highlight p{margin:0;color:rgba(255,255,255,.96)}
+.highlight svg{flex:0 0 26px}
+
+/* Sections / cards */
+section {
+  padding: 80px 0;
+}
+
+/* Section headings and intro text */
+.section-title {
+  font-size: clamp(24px, 3.1vw, 36px);
+  line-height: 1.15;
+  margin: 0 0 10px;
+  color: var(--brand-900);
+}
+
+.section-lead {
+  color: var(--muted);
+  max-width: 62ch;
+  margin: 0 0 24px;
+}
+
+/* Responsive grids for section content */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+/* Card component used across the site */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px;
+  box-shadow: var(--shadow);
+}
+
+.card h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  color: var(--brand-900);
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* Tiles for focus area grid */
+.tile {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px;
+  display: grid;
+  gap: 8px;
+  align-content: start;
+  min-height: 140px;
+  box-shadow: var(--shadow);
+  transition: transform 0.1s ease, box-shadow 0.3s ease;
+}
+
+.tile:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 42px rgba(2, 12, 27, 0.1);
+}
+
+.tile strong {
+  color: var(--brand-900);
+}
+
+.tile span {
+  color: var(--muted);
+}
+
+/* Operating system pillar component */
+.pillar {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #eef2ff;
+  display: grid;
+  place-items: center;
+}
+
+/* Contact form layout */
+.contact-card {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+/* Honeypot field hidden off-screen */
+.hp-field {
+  position: absolute !important;
+  left: -9999px !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  width: 0 !important;
+}
+
+/* Form field container */
+.field {
+  display: block;
+}
+
+.field > span {
+  display: block;
+  font-size: 0.9rem;
+  color: #334155;
+  margin: 0 0 6px;
+}
+
+/* Input and textarea styling */
+.field input,
+.field textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 14px;
+  font: 16px/1.5 var(--font);
+  color: var(--fg);
+  background: #fff;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.2s ease;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: var(--brand-700);
+  box-shadow: 0 0 0 4px rgba(26, 115, 232, 0.14);
+}
+
+/* Grid layout for the top row of the contact form */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+/* Actions row for the form (button + status) */
+.form-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 12px;
+}
+
+/* Status text for form submission */
+.form-status {
+  font-size: 0.95rem;
+  color: #0b7;
+}
+
+.form-status.error {
+  color: #b00;
+}
+
+/* Responsive adjustments for form on small screens */
+@media (max-width: 640px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Additional responsive layout adjustments */
+@media (max-width: 960px) {
+  /* Stack highlights in hero on small screens */
+  .owner-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  /* Expand hero padding slightly on smaller screens */
+  .hero .inner {
+    padding: 90px 0;
+  }
+
+  /* Single column grids for OS, investors, careers */
+  .grid-3,
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  /* Make footers columns stack nicely */
+  .foot-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .foot-grid {
+    grid-template-columns: 1fr;
+  }
+}
