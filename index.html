@@ -3,354 +3,370 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NAVIGATOR HOLDINGS | Acquisition &amp; Operating Company</title>
-  <meta name="description" content="Operator‑led acquisition firm focused on resilient, service‑led businesses in the lower middle market." />
-  <meta property="og:title" content="NAVIGATOR HOLDINGS | Acquisition &amp; Operating Company" />
-  <meta property="og:description" content="Operator‑led acquisition firm focused on resilient, service‑led businesses in the lower middle market." />
+  <title>Navigator Holdings | Acquiring and Building Enduring Service Businesses</title>
+  <meta name="description" content="Navigator Holdings is a privately held, operator-led acquisition company that buys and builds essential service and light industrial businesses in the lower middle market." />
+  <meta property="og:title" content="Navigator Holdings | Acquiring and Building Enduring Service Businesses" />
+  <meta property="og:description" content="A long-term home for founder-built service and light industrial businesses. $1–5M EBITDA, U.S.-based." />
   <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0b2545" />
   <meta name="color-scheme" content="light" />
-  <!-- Favicon and theme colours -->
-  <link rel="icon" href="assets/logo.svg" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Navigator Holdings LLC",
+    "logo": "assets/nav-logo.png",
+    "description": "Operator-led acquisition company focused on essential service and light industrial businesses in the lower middle market."
+  }
+  </script>
 </head>
 <body>
-  <!-- Skip link for keyboard users -->
   <a class="skip" href="#main">Skip to content</a>
-  <header aria-label="Main navigation">
+
+  <header class="site-header" id="siteHeader">
     <div class="container nav">
-      <!-- Branding -->
-      <a class="brand" href="#home" aria-label="NAVIGATOR HOLDINGS home">
-        <!-- Use our SVG logomark for crisp rendering -->
-        <img class="brand-logo" src="assets/nav-logo.png" alt="Navigator Holdings logo" />
-        <span class="brand-word">Navigator Holdings</span>
+      <a class="brand" href="#top" aria-label="Navigator Holdings home">
+        <img class="brand-logo" src="assets/nav-logo.png" alt="Navigator Holdings logo" width="31" height="44" />
+        <span class="brand-word">Navigator<span> Holdings</span></span>
       </a>
-      <!-- Primary navigation -->
       <nav aria-label="Primary">
-        <ul>
+        <ul class="nav-links">
           <li><a href="#about">About</a></li>
+          <li><a href="#criteria">Criteria</a></li>
+          <li><a href="#owners">For Owners</a></li>
           <li><a href="#approach">Approach</a></li>
-          <li><a href="#focus">Focus Areas</a></li>
-          <li><a href="#investors">Investors</a></li>
-          <li><a href="#careers">Careers</a></li>
+          <li><a href="#leadership">Our Team</a></li>
         </ul>
       </nav>
       <div class="top-cta">
-        <a class="btn outline" href="#contact">Contact</a>
-        <!-- Mobile toggle button appears on small screens -->
-        <button class="mobile-toggle" id="mobileToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Toggle menu">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M4 6h16M4 12h16M4 18h16" stroke="#012a5e" stroke-width="2" stroke-linecap="round" />
-          </svg>
+        <a class="btn btn-primary btn-sm" href="#contact">Get in touch</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+          <span></span><span></span><span></span>
         </button>
       </div>
     </div>
-    <!-- Mobile navigation menu -->
-    <div id="mobileMenu" class="mobile-menu" role="region" aria-label="Mobile menu">
+    <div id="mobileMenu" class="mobile-menu">
       <div class="container">
         <a href="#about">About</a>
+        <a href="#criteria">Criteria</a>
+        <a href="#owners">For Owners</a>
         <a href="#approach">Approach</a>
-        <a href="#focus">Focus Areas</a>
-        <a href="#investors">Investors</a>
-        <a href="#careers">Careers</a>
-        <a class="btn outline" style="margin:8px 0 16px" href="#contact">Contact</a>
+        <a href="#leadership">Our Team</a>
+        <a href="#partners">Partners</a>
+        <a href="#contact" class="btn btn-primary">Get in touch</a>
       </div>
     </div>
   </header>
 
   <main id="main">
-    <!-- HERO SECTION -->
-    <section class="hero" id="home" aria-label="Hero">
-      <div class="container inner">
-        <div>
-          <!-- Hero messaging emphasises operator‑first philosophy -->
-          <div class="eyebrow">Operator‑first partnership</div>
-          <h1>We acquire and build enduring companies in essential services</h1>
-          <p class="lead">We invest in and operate mission‑critical service businesses. Our teams protect legacy, empower people and compound cash flows through continuous improvement and commercial excellence.</p>
+    <!-- HERO -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <img class="hero-mark" src="assets/logo-white.png" alt="" aria-hidden="true" />
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow eyebrow-light">Private holding company &middot; Long-term ownership</p>
+          <h1 id="hero-title">A permanent home for the businesses that keep the economy <em>running</em>.</h1>
+          <p class="lead">Navigator Holdings acquires and operates essential service and light industrial companies. We partner with founders who want their business, people and reputation in steady hands for the next generation.</p>
           <div class="hero-ctas">
-            <a class="btn primary" href="#approach">Our Approach</a>
-            <a class="btn outline" href="#contact">Contact Us</a>
+            <a class="btn btn-primary" href="#contact">Discuss your business</a>
+            <a class="btn btn-ghost" href="#criteria">View our criteria</a>
           </div>
-          <!-- Quick metrics summarising our investment criteria -->
-          <div class="fact-band" aria-label="At a glance">
-            <div class="fact"><b>$3–30M</b>Revenue target</div>
-            <div class="fact"><b>$1–5M</b>EBITDA sweet spot</div>
-            <div class="fact"><b>Service &amp; Light Industrial</b>Focus areas</div>
-          </div>
-          <!-- Highlights demonstrating our difference -->
-          <div class="owner-highlights" aria-label="Why Navigator">
-            <div class="highlight">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke="#9dd2ff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <p>Operator‑led teams with deep experience across services and light industrial markets</p>
-            </div>
-            <div class="highlight">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke="#9dd2ff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <p>Proven operating system that compounds small improvements into outsized results</p>
-            </div>
-            <div class="highlight">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke="#9dd2ff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <p>Collaborative partnerships with founders and investors for the long term</p>
-            </div>
-          </div>
+        </div>
+
+        <aside class="hero-panel" aria-label="Investment criteria at a glance">
+          <p class="panel-label">At a glance</p>
+          <dl class="glance">
+            <div><dt>Revenue</dt><dd>$3–30M</dd></div>
+            <div><dt>EBITDA</dt><dd>$1–5M</dd></div>
+            <div><dt>Ownership</dt><dd>Control, long-term</dd></div>
+            <div><dt>Sectors</dt><dd>Services &amp; light industrial</dd></div>
+          </dl>
+          <a class="panel-link" href="#criteria">Full investment criteria &rarr;</a>
+        </aside>
+      </div>
+    </section>
+
+    <!-- VALUE PROPS -->
+    <section class="strip" aria-label="Why Navigator">
+      <div class="container strip-grid">
+        <div class="strip-item">
+          <span class="strip-num">01</span>
+          <h3>Owner-operators, not financial tourists</h3>
+          <p>We run what we buy. Decisions are made by the people accountable for the result.</p>
+        </div>
+        <div class="strip-item">
+          <span class="strip-num">02</span>
+          <h3>Patient, flexible capital</h3>
+          <p>No fixed fund life forcing a sale. We structure around your goals, not a timetable.</p>
+        </div>
+        <div class="strip-item">
+          <span class="strip-num">03</span>
+          <h3>Rigorous, straightforward process</h3>
+          <p>Clear feedback early, disciplined diligence, and a buyer that does what it says.</p>
         </div>
       </div>
     </section>
 
-    <!-- ABOUT SECTION -->
-    <section id="about" aria-label="About">
-      <div class="container">
-        <h2 class="section-title">About Navigator Holdings</h2>
-        <p class="section-lead">We are an operator‑led holding company. Our model mirrors world‑class industrial science companies: a <strong>decentralised operating structure</strong> at the business level and a shared <strong>continuous‑improvement system</strong> for compounding performance.</p>
-        <div class="grid-3">
-          <div class="card">
-            <h3>Hold forever (when we’re the best owner)</h3>
-            <p>We buy control positions in resilient, niche leaders and hold long‑term where our operating system is a durable edge. We are also willing to <em>shape the portfolio</em> if a business is no longer core.</p>
-          </div>
-          <div class="card">
-            <h3>Recurring, mission‑critical revenue</h3>
-            <p>We prefer installed‑base, service and consumables revenue with high switching costs and strong cash conversion.</p>
-          </div>
-          <div class="card">
-            <h3>Operator’s playbook</h3>
-            <p>Daily management, kaizen events, policy deployment and rigorous problem solving drive safety, quality, delivery and cost—then commercial excellence accelerates growth.</p>
-          </div>
+    <!-- ABOUT -->
+    <section id="about" class="section" aria-labelledby="about-title">
+      <div class="container split">
+        <div>
+          <p class="eyebrow">About us</p>
+          <h2 id="about-title" class="section-title">Built to own great businesses for the long term</h2>
         </div>
+        <div>
+          <p class="section-lead">Navigator Holdings is a privately held acquisition and operating company. We seek control of established, profitable businesses with loyal customers and recurring demand, then invest in their people, systems and growth.</p>
+          <p class="body-copy">Our model is simple: buy well, operate with discipline, and reinvest the cash flow. Each business keeps its identity and local leadership, backed by a holding company that brings capital, financial rigor and proven improvement practices.</p>
+        </div>
+      </div>
+      <div class="container grid-3 about-cards">
+        <article class="card">
+          <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 4.5-3.4 8.4-8 9-4.6-.6-8-4.5-8-9V7l8-4z"/></svg></div>
+          <h3>Hold, not flip</h3>
+          <p>We buy to own. Where we are the best long-term owner, we intend to hold indefinitely.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0114-5.3M20 12a8 8 0 01-14 5.3M18 3v4h-4M6 21v-4h4"/></svg></div>
+          <h3>Recurring, essential revenue</h3>
+          <p>Services and consumables customers rely on, with high switching costs and strong cash conversion.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 19h16M7 16V9M12 16V5M17 16v-4"/></svg></div>
+          <h3>Compounding improvement</h3>
+          <p>Small, steady operational gains across safety, quality, delivery and cost that add up year after year.</p>
+        </article>
       </div>
     </section>
 
-    <!-- FOCUS AREAS SECTION -->
-    <section id="focus" aria-label="Focus Areas" style="background:linear-gradient(180deg,#fff,#f8fafc)">
+    <!-- CRITERIA -->
+    <section id="criteria" class="section section-tint" aria-labelledby="criteria-title">
       <div class="container">
-        <h2 class="section-title">Focus areas</h2>
-        <p class="section-lead">Service and industry segments we pursue and operate in our portfolio. </p>
-        <div class="grid-4">
-          <a class="tile" href="#" aria-label="Light Industrial Services"><strong>Light Industrial Services</strong><span>Maintenance, testing, specialty contracting</span></a>
-          <a class="tile" href="#" aria-label="Fabrication &amp; Manufacturing"><strong>Fabrication &amp; Manufacturing</strong><span>Short‑run, make‑to‑order, quality‑critical</span></a>
-          <a class="tile" href="#" aria-label="Logistics &amp; Field Services"><strong>Logistics &amp; Field Services</strong><span>Regionally dense, recurring routes</span></a>
-          <a class="tile" href="#" aria-label="B2B Services"><strong>B2B Services</strong><span>Sticky, compliance‑driven workflows</span></a>
-        </div>
-      </div>
-    </section>
+        <p class="eyebrow">Investment criteria</p>
+        <h2 id="criteria-title" class="section-title">What we look for</h2>
+        <p class="section-lead">We focus on established, founder- or family-owned companies where a thoughtful ownership transition matters as much as price.</p>
 
-    <!-- OPERATING SYSTEM SECTION -->
-    <section id="approach" class="os" aria-label="Our Operating System">
-      <div class="container">
-        <h2 class="section-title">Our Operating System</h2>
-        <p class="section-lead">A practical, teachable system inspired by proven continuous‑improvement philosophies. It scales from the front line to the boardroom and underpins how we improve the businesses we acquire.</p>
-        <div class="grid-3">
-          <div class="card pillar">
-            <div class="icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="12" cy="7" r="3.5" stroke="#0a4ea8" stroke-width="2" />
-                <path d="M4 20c.8-3.8 3.9-6 8-6s7.2 2.2 8 6" stroke="#0a4ea8" stroke-width="2" stroke-linecap="round" />
-              </svg>
-            </div>
-            <div>
-              <h3>People &amp; leadership</h3>
-              <p>Leader standard work, tiered daily huddles and visual management create alignment and fast problem escalation. We invest in training (A3 thinking, root‑cause, kaizen facilitation).</p>
-            </div>
+        <div class="criteria-grid">
+          <div class="card criteria-table">
+            <h3>Financial profile</h3>
+            <dl>
+              <div><dt>Revenue</dt><dd>$3M – $30M</dd></div>
+              <div><dt>EBITDA</dt><dd>$1M – $5M</dd></div>
+              <div><dt>Track record</dt><dd>Consistent profitability, 5+ years operating history</dd></div>
+              <div><dt>Location</dt><dd>United States; priority on the Northeast and Mid-Atlantic</dd></div>
+              <div><dt>Situation</dt><dd>Founder retirement, succession, or partial liquidity</dd></div>
+              <div><dt>Structure</dt><dd>Majority or full control; seller rollover and transition roles welcome</dd></div>
+            </dl>
           </div>
-          <div class="card pillar">
-            <div class="icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="3" y="4" width="18" height="14" rx="2" stroke="#0a4ea8" stroke-width="2" />
-                <path d="M7 12h10M7 8h10M7 16h6" stroke="#0a4ea8" stroke-width="2" stroke-linecap="round" />
-              </svg>
-            </div>
-            <div>
-              <h3>Policy deployment</h3>
-              <p>Annual and quarterly <em>strategy deployment</em> (Hoshin) cascades a few vital objectives through metrics (“bowlers”). Every team knows the target, gap and owner.</p>
-            </div>
-          </div>
-          <div class="card pillar">
-            <div class="icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 14l4 4 12-12" stroke="#0a4ea8" stroke-width="2" stroke-linecap="round" />
-              </svg>
-            </div>
-            <div>
-              <h3>Problem solving</h3>
-              <p>Standard work, 5S, A3 root‑cause, countermeasures and check/adjust cycles. We favour small, rapid PDCA experiments over big‑bang projects.</p>
-            </div>
-          </div>
-          <div class="card pillar">
-            <div class="icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 4h12v6H6z" stroke="#0a4ea8" stroke-width="2" />
-                <path d="M8 18h8" stroke="#0a4ea8" stroke-width="2" stroke-linecap="round" />
-              </svg>
-            </div>
-            <div>
-              <h3>Growth engine</h3>
-              <p>Voice‑of‑Customer, segmentation, pricing discipline, funnel management and launch excellence. We measure win‑rates, time‑to‑close and unit economics weekly.</p>
-            </div>
-          </div>
-          <div class="card pillar">
-            <div class="icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 12h16" stroke="#0a4ea8" stroke-width="2" />
-                <path d="M8 8h8M8 16h8" stroke="#0a4ea8" stroke-width="2" stroke-linecap="round" />
-              </svg>
-            </div>
-            <div>
-              <h3>SIOP &amp; supply chain</h3>
-              <p>Sales, Inventory &amp; Operations Planning, capacity modelling, supplier development and inventory turns. Objective: shorter lead times, higher OTIF, lower working capital.</p>
-            </div>
-          </div>
-          <div class="card pillar">
-            <div class="icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 3v18M3 12h18" stroke="#0a4ea8" stroke-width="2" stroke-linecap="round" />
-              </svg>
-            </div>
-            <div>
-              <h3>Digital &amp; data</h3>
-              <p>Simple KPI stack (safety, quality, delivery, cost, growth) and clean financials. We instrument the shop floor and CRM to move from lagging to leading indicators.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- INVESTMENT & ACQUISITION APPROACH SECTION -->
-    <section id="playbook" aria-label="Investment &amp; Acquisition" style="background:linear-gradient(180deg,#fff,#f8fafc)">
-      <div class="container">
-        <h2 class="section-title">Investment &amp; acquisition approach</h2>
-        <p class="section-lead">Our disciplined flywheel: <strong>Acquire great businesses</strong> → <strong>Improve with our operating system</strong> → <strong>Compound cash flows</strong> → <strong>Reinvest</strong>. We preserve operator autonomy while bringing scale advantages.</p>
-        <div class="grid-3">
           <div class="card">
-            <h3>What we buy</h3>
-            <ul>
-              <li>Attractive markets with secular growth (infrastructure services, compliance‑driven workflows).</li>
-              <li>Quality businesses: strong brand, differentiated tech/process, repeat/recurring revenue, margin expansion potential.</li>
-              <li>Fit‑for‑system: clear roadmap where our operating system is a real edge.</li>
+            <h3>Business characteristics</h3>
+            <ul class="check-list">
+              <li>Essential products or services with recurring or repeat demand</li>
+              <li>Diversified customer base and a strong local reputation</li>
+              <li>Tenured employees and a team willing to grow with new ownership</li>
+              <li>Clear opportunities to improve operations, pricing or reach</li>
             </ul>
-          </div>
-          <div class="card">
-            <h3>How we underwrite</h3>
-            <ul>
-              <li>“Best owner” test; conservative leverage; cash conversion focus (ROIC &gt; WACC through the cycle).</li>
-              <li>Value‑creation plan pre‑sign: 5–7 priority initiatives with owners, milestones and economics.</li>
-              <li>Clean‑room integration to protect day‑one continuity (people, customers, safety, compliance).</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Post‑close (30/60/90)</h3>
-            <ul>
-              <li>Stabilise: governance, financial close cadence, KPI stack, customer communication.</li>
-              <li>Standardise: leader standard work, SIOP, pricing guardrails, service level agreements.</li>
-              <li>Improve: kaizen events on lead time, scrap/rework, quote‑to‑cash; launch quick‑win growth sprints.</li>
+            <h3 class="mt">Outside our focus</h3>
+            <ul class="x-list">
+              <li>Turnarounds and binary-risk situations</li>
+              <li>Heavy customer concentration without mitigation</li>
+              <li>Early-stage or speculative technology</li>
             </ul>
           </div>
         </div>
-        <div class="grid-2" style="margin-top:18px">
-          <div class="card">
-            <h3>What we won’t do</h3>
-            <ul>
-              <li>Turnaround of distressed, binary‑risk businesses.</li>
-              <li>High customer concentration without mitigation.</li>
-              <li>Speculative tech without line‑of‑sight to unit economics.</li>
-            </ul>
+
+        <h3 class="sub-title">Sectors of interest</h3>
+        <div class="grid-4 sectors">
+          <div class="sector">
+            <strong>Light industrial services</strong>
+            <span>Maintenance, testing, inspection and specialty contracting</span>
           </div>
-          <div class="card">
-            <h3>Portfolio shaping</h3>
-            <p>We periodically assess where we are the best long‑term owner. We will divest or partner when a business no longer fits our edge—keeping focus and reinvesting in our core.</p>
+          <div class="sector">
+            <strong>Fabrication &amp; manufacturing</strong>
+            <span>Short-run, make-to-order and quality-critical production</span>
+          </div>
+          <div class="sector">
+            <strong>Distribution &amp; logistics</strong>
+            <span>Specialty distribution, reverse logistics and route-based field services</span>
+          </div>
+          <div class="sector">
+            <strong>B2B &amp; property services</strong>
+            <span>Compliance-driven, recurring commercial and residential services</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- INVESTORS SECTION -->
-    <section id="investors" aria-label="Investors" style="background:linear-gradient(180deg,#fff,#f8fafc)">
+    <!-- FOR OWNERS -->
+    <section id="owners" class="section" aria-labelledby="owners-title">
+      <div class="container split">
+        <div>
+          <p class="eyebrow">For business owners</p>
+          <h2 id="owners-title" class="section-title">Selling your company is a once-in-a-lifetime decision</h2>
+          <p class="section-lead">We know your business is more than a set of financials. It carries your name, your employees' livelihoods and relationships you've built over decades.</p>
+          <a class="btn btn-primary" href="#contact">Start a confidential conversation</a>
+        </div>
+        <div class="promise-list">
+          <div class="promise">
+            <h3>Your people stay at the center</h3>
+            <p>We acquire businesses for their teams. Our plans are built around retaining and developing the employees who made the company successful.</p>
+          </div>
+          <div class="promise">
+            <h3>Your legacy and brand endure</h3>
+            <p>The company name, customer relationships and local presence stay intact. We build on what works.</p>
+          </div>
+          <div class="promise">
+            <h3>Structures that fit your goals</h3>
+            <p>Full exit, partial liquidity with rollover equity, or a gradual transition. You decide your role after closing.</p>
+          </div>
+          <div class="promise">
+            <h3>Complete confidentiality</h3>
+            <p>Conversations are discreet from the first call. We sign an NDA before reviewing sensitive information.</p>
+          </div>
+        </div>
+      </div>
+
       <div class="container">
-        <h2 class="section-title">For investors</h2>
-        <p class="section-lead">Navigator Holdings delivers enduring value by operating and compounding resilient service businesses. We invest alongside our partners and focus on long‑term returns.</p>
+        <h3 class="sub-title">How a transaction works</h3>
+        <ol class="process">
+          <li><span class="step">1</span><h4>Introductory call</h4><p>A no-obligation conversation about your goals and your business.</p></li>
+          <li><span class="step">2</span><h4>NDA &amp; initial review</h4><p>We review summary financials and share early feedback, quickly.</p></li>
+          <li><span class="step">3</span><h4>Indication of value</h4><p>A clear, written view of valuation and structure.</p></li>
+          <li><span class="step">4</span><h4>Letter of intent</h4><p>Agreed terms, timeline and transition plan.</p></li>
+          <li><span class="step">5</span><h4>Diligence &amp; closing</h4><p>Focused, respectful diligence with experienced advisors.</p></li>
+          <li><span class="step">6</span><h4>Transition</h4><p>A structured handover that protects day-one continuity.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- APPROACH -->
+    <section id="approach" class="section section-dark" aria-labelledby="approach-title">
+      <div class="container">
+        <p class="eyebrow eyebrow-light">How we operate</p>
+        <h2 id="approach-title" class="section-title light">An operating approach built on continuous improvement</h2>
+        <p class="section-lead light">Inspired by the world's best industrial compounders: decentralized leadership in each business, supported by a shared set of practical tools that turn small improvements into durable results.</p>
+
+        <div class="grid-3 pillars">
+          <div class="pillar"><h3>People &amp; leadership</h3><p>Daily huddles, visual management and leader standard work. We invest in training and promote from within.</p></div>
+          <div class="pillar"><h3>Strategy deployment</h3><p>A few vital annual objectives cascaded into clear metrics. Every team knows the target, the gap and the owner.</p></div>
+          <div class="pillar"><h3>Problem solving</h3><p>Root-cause analysis and rapid plan-do-check-act cycles. Small experiments over big-bang projects.</p></div>
+          <div class="pillar"><h3>Commercial excellence</h3><p>Customer insight, pricing discipline and pipeline management to grow profitably.</p></div>
+          <div class="pillar"><h3>Operations &amp; supply chain</h3><p>Capacity planning, supplier development and inventory discipline for shorter lead times and less working capital.</p></div>
+          <div class="pillar"><h3>Financial clarity</h3><p>Clean, timely financials and a simple KPI stack that moves management from lagging to leading indicators.</p></div>
+        </div>
+
+        <div class="plan">
+          <div class="plan-col"><span class="plan-tag">First 30 days</span><h4>Stabilize</h4><p>Governance, monthly close, KPI baseline and proactive communication with customers and staff.</p></div>
+          <div class="plan-col"><span class="plan-tag">Days 30–60</span><h4>Standardize</h4><p>Standard work, planning cadence, pricing guardrails and service level commitments.</p></div>
+          <div class="plan-col"><span class="plan-tag">Days 60–90+</span><h4>Improve</h4><p>Targeted improvement events on lead time, rework and quote-to-cash, plus early growth initiatives.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEADERSHIP -->
+    <section id="leadership" class="section" aria-labelledby="leadership-title">
+      <div class="container">
+        <p class="eyebrow">Our team</p>
+        <h2 id="leadership-title" class="section-title">Led by partners who have built, operated and transacted</h2>
+        <p class="section-lead">Navigator is led by a partnership group that blends family business roots with institutional experience. Each partner brings deep functional expertise, so every company we acquire gets more than capital: it gets a bench of seasoned operators and advisors from day one.</p>
+
+        <div class="grid-4 expertise">
+          <article class="exp">
+            <span class="exp-num">01</span>
+            <h3>Ownership &amp; transactions</h3>
+            <p>Family business roots, Wharton business education and Big Four and M&amp;A experience. We understand succession from the owner's side of the table and structure deals with discipline.</p>
+          </article>
+          <article class="exp">
+            <span class="exp-num">02</span>
+            <h3>Technology &amp; digital</h3>
+            <p>Experience from some of the world's largest technology companies, applied practically: modern systems, data and e-commerce that help traditional businesses compete and grow.</p>
+          </article>
+          <article class="exp">
+            <span class="exp-num">03</span>
+            <h3>Global operations &amp; supply chain</h3>
+            <p>Leadership experience in global shipping and logistics. We bring sourcing, procurement and operating know-how that lowers costs and improves service.</p>
+          </article>
+          <article class="exp">
+            <span class="exp-num">04</span>
+            <h3>Legal &amp; governance</h3>
+            <p>Counsel grounded in national law firm practice, so transactions close cleanly and the businesses we own are run with strong governance and compliance.</p>
+          </article>
+        </div>
+
+        <div class="network">
+          <div>
+            <p class="eyebrow eyebrow-light">Capital</p>
+            <h3>An established network of investors, ready to deploy</h3>
+          </div>
+          <p>We are backed by an extensive network of investors who have transacted with us before and are ready to commit capital to the right opportunity. For sellers and brokers, that means certainty of funding, speed and a reliable path to closing.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARTNERS -->
+    <section id="partners" class="section section-tint" aria-labelledby="partners-title">
+      <div class="container">
+        <p class="eyebrow">Partners</p>
+        <h2 id="partners-title" class="section-title">Working with intermediaries and capital partners</h2>
         <div class="grid-2">
-          <div class="card">
-            <h3>Why invest with us</h3>
-            <ul>
-              <li>Long‑term compounded returns through operational excellence</li>
-              <li>Resilient service businesses with recurring, mission‑critical revenue</li>
-              <li>Alignment with investors via meaningful personal capital at risk</li>
-              <li>Disciplined capital allocation and conservative leverage</li>
+          <article class="card">
+            <h3>Brokers &amp; advisors</h3>
+            <p>We value our relationships with business brokers, M&amp;A advisors, attorneys and accountants. Send us opportunities that fit our criteria and expect a prompt review and a clear answer, whether yes or no.</p>
+            <ul class="check-list">
+              <li>Quick, honest feedback on every opportunity</li>
+              <li>Respect for your process and your client</li>
+              <li>Reliable execution through closing</li>
             </ul>
-          </div>
-          <div class="card">
-            <h3>Our commitments</h3>
-            <ul>
-              <li>Transparent communication and timely reporting</li>
-              <li>Rigorous governance and risk management</li>
-              <li>Sustainable growth that benefits employees, customers and communities</li>
-              <li>Open collaboration with like‑minded, patient capital partners</li>
+          </article>
+          <article class="card">
+            <h3>Capital partners</h3>
+            <p>We work with an established network of patient, like-minded co-investors and lenders, many of whom have transacted with us before. Our partners invest alongside them on every transaction.</p>
+            <ul class="check-list">
+              <li>Disciplined underwriting and conservative leverage</li>
+              <li>Transparent, timely reporting</li>
+              <li>Strong governance and alignment of interests</li>
             </ul>
-          </div>
+          </article>
         </div>
-        <p style="margin-top:24px">Interested in partnering with Navigator Holdings? <a class="btn primary" href="#contact">Contact us</a></p>
       </div>
     </section>
 
-
-    <!-- CAREERS SECTION -->
-    <section id="careers" aria-label="Careers" style="background:linear-gradient(180deg,#fff,#f8fafc)">
-      <div class="container">
-        <h2 class="section-title">Careers at Navigator Holdings</h2>
-        <p class="section-lead">Operators, builders and learners thrive here. Join a team that compounds small improvements into enduring impact.</p>
-        <div class="grid-2">
-          <div class="card">
-            <h3>Who thrives here</h3>
-            <ul>
-              <li>General managers &amp; P&amp;L owners with hands‑on leadership experience</li>
-              <li>Continuous improvement practitioners: Lean, Kaizen and Six Sigma leaders</li>
-              <li>Commercial builders: marketing, sales and product professionals</li>
-              <li>Functional experts: finance, supply chain and digital transformation</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>What we look for</h3>
-            <ul>
-              <li>Ownership mindset and bias to action</li>
-              <li>Data‑driven problem solving and curiosity</li>
-              <li>Commitment to team culture and development</li>
-              <li>Desire to work in essential service &amp; light industrial businesses</li>
-            </ul>
-          </div>
+    <!-- CONTACT -->
+    <section id="contact" class="section" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title" class="section-title">Let's start a conversation</h2>
+          <p class="section-lead">Whether you're a business owner considering your options, an advisor with an opportunity, or an operator interested in leading one of our companies, we'd like to hear from you. All inquiries are treated confidentially.</p>
         </div>
-        <p style="margin-top:24px">See yourself here? <a class="btn primary" href="#contact">Contact us</a></p>
-      </div>
-    </section>
 
-    <!-- CONTACT SECTION -->
-    <!--
-      The contact section has been simplified to a single form.  A grid
-      layout keeps the name and email fields on one row on larger screens
-      and stacks them on mobile.  A hidden honeypot field helps deter
-      automated spam submissions.  When deploying to a static host like
-      GitHub Pages you’ll need to configure a form back‑end (e.g. Formspree,
-      Getform, Basin, Netlify Forms) and set the FORM_ENDPOINT in
-      script.js accordingly.
-    -->
-    <section id="contact" aria-label="Contact" style="scroll-margin-top:80px;">
-      <div class="container">
-        <h2 class="section-title">Contact</h2>
-        <p class="section-lead">We’re eager to connect. Send us a note and we’ll get back to you promptly.</p>
-        <form id="contactForm" class="card contact-card" method="POST" novalidate>
-          <!-- Honeypot field to deter spam bots -->
+        <form id="contactForm" class="card contact-card" action="https://formspree.io/f/xdkdryda" method="POST" novalidate>
           <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp-field" aria-hidden="true" />
+          <input type="hidden" name="_subject" value="New inquiry from navigator holdings website" />
           <div class="form-grid">
-            <label class="field">
-              <span>Name</span>
-              <input type="text" name="name" required />
-            </label>
-            <label class="field">
-              <span>Email</span>
-              <input type="email" name="email" required />
+            <label class="field"><span>Name</span><input type="text" name="name" autocomplete="name" required /></label>
+            <label class="field"><span>Email</span><input type="email" name="email" autocomplete="email" required /></label>
+          </div>
+          <div class="form-grid">
+            <label class="field"><span>Company <em class="opt">(optional)</em></span><input type="text" name="company" autocomplete="organization" /></label>
+            <label class="field"><span>I am a&hellip;</span>
+              <select name="inquiry_type">
+                <option>Business owner</option>
+                <option>Broker / M&amp;A advisor</option>
+                <option>Capital partner / lender</option>
+                <option>Operator / candidate</option>
+                <option>Other</option>
+              </select>
             </label>
           </div>
-          <label class="field">
-            <span>Message</span>
-            <textarea name="message" rows="6" required></textarea>
-          </label>
+          <label class="field"><span>Message</span><textarea name="message" rows="5" required></textarea></label>
           <div class="form-actions">
-            <button class="btn primary" type="submit" id="formSubmit">Send message</button>
+            <button class="btn btn-primary" type="submit" id="formSubmit">Send message</button>
             <span id="formStatus" class="form-status" role="status" aria-live="polite"></span>
           </div>
         </form>
@@ -358,37 +374,29 @@
     </section>
   </main>
 
-  <!-- FOOTER -->
-  <footer role="contentinfo">
+  <footer class="site-footer">
     <div class="container foot-grid">
       <div>
-        <h5>About</h5>
-        <p style="margin:0;color:#475569;max-width:50ch">Navigator Holdings is an operator‑led acquisition company focused on resilient, service‑led businesses in the lower middle market.</p>
+        <p class="foot-brand"><img src="assets/logo-white.png" alt="" width="24" height="35" />Navigator Holdings</p>
+        <p class="foot-about">A privately held, operator-led acquisition company focused on essential service and light industrial businesses. Based in Greater Philadelphia.</p>
       </div>
       <div>
         <h5>Company</h5>
         <a href="#about">About</a>
         <a href="#approach">Approach</a>
-        <a href="#focus">Focus Areas</a>
+        <a href="#leadership">Our Team</a>
       </div>
       <div>
-        <h5>More</h5>
-        <a href="#investors">Investors</a>
-        <a href="#careers">Careers</a>
+        <h5>Work with us</h5>
+        <a href="#criteria">Investment criteria</a>
+        <a href="#owners">For owners</a>
+        <a href="#partners">For partners</a>
         <a href="#contact">Contact</a>
-      </div>
-      <div>
-        <h5>Legal</h5>
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
       </div>
     </div>
     <div class="container subfoot">
-      <div>© <span id="year"></span> Navigator Holdings. All rights reserved.</div>
-      <div style="display:flex;gap:14px">
-        <a href="#" aria-label="LinkedIn">LinkedIn</a>
-        <a href="#" aria-label="Email">Email</a>
-      </div>
+      <p>&copy; <span id="year"></span> Navigator Holdings LLC. All rights reserved.</p>
+      <p class="disclaimer">This website is for informational purposes only and does not constitute an offer to sell or a solicitation of an offer to buy any security.</p>
     </div>
   </footer>
 

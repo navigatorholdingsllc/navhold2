@@ -1,81 +1,102 @@
 /*
-  Site Interaction Scripts
-  - Mobile nav toggle
+  Navigator Holdings — site scripts
+  - Mobile menu (closes on link click / Escape)
+  - Header shadow on scroll
+  - Scroll-reveal animations
   - Copyright year
-  - Optional email obfuscation (if you keep a visible address)
-  - Contact form submission (static-host friendly)
+  - Contact form via Formspree (real success/error handling)
 */
-
 (function () {
-  // Mobile menu toggle
+  document.documentElement.classList.add('js');
+
+  // Mobile menu
   const toggle = document.getElementById('mobileToggle');
   const menu = document.getElementById('mobileMenu');
+  const setMenu = (open) => {
+    menu.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  };
   if (toggle && menu) {
-    toggle.addEventListener('click', () => {
-      const isOpen = menu.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', String(isOpen));
-    });
+    toggle.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
+    menu.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setMenu(false)));
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
   }
 
-  // Dynamic year
+  // Header state on scroll
+  const header = document.getElementById('siteHeader');
+  const onScroll = () => header && header.classList.toggle('scrolled', window.scrollY > 8);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // Scroll reveal
+  const targets = document.querySelectorAll('.card, .sector, .exp, .promise, .pillar, .process li, .strip-item, .plan-col');
+  if ('IntersectionObserver' in window) {
+    targets.forEach((el) => el.classList.add('reveal'));
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) { entry.target.classList.add('in'); io.unobserve(entry.target); }
+      });
+    }, { rootMargin: '0px 0px -60px 0px', threshold: 0.08 });
+    targets.forEach((el) => io.observe(el));
+  }
+
+  // Year
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // Contact form (works with a form backend like Formspree)
-  const FORM_ENDPOINT = "https://formspree.io/f/xdkdryda"; // e.g. "https://formspree.io/f/yourid"  ← set this!
+  // Contact form
   const form = document.getElementById('contactForm');
   const statusEl = document.getElementById('formStatus');
   const submitBtn = document.getElementById('formSubmit');
+  if (!form) return;
 
-  if (form) {
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
+  const setStatus = (msg, isError) => {
+    statusEl.textContent = msg;
+    statusEl.classList.toggle('error', !!isError);
+  };
 
-      // Basic client-side validation: ensure all fields are filled.  This
-      // complements native HTML5 validation and avoids submitting empty forms
-      // on static hosts like GitHub Pages.  If any field is blank, show an
-      // error message and abort submission.
-      const nameVal = form.elements['name']?.value.trim();
-      const emailVal = form.elements['email']?.value.trim();
-      const messageVal = form.elements['message']?.value.trim();
-      if (!nameVal || !emailVal || !messageVal) {
-        statusEl.classList.add('error');
-        statusEl.textContent = "Please fill out all fields before sending.";
-        return;
-      }
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
 
-      if (!FORM_ENDPOINT) {
-        statusEl.classList.remove('error');
-        statusEl.textContent = "Configure a form endpoint to enable submissions.";
-        return;
-      }
-      try {
-        submitBtn.disabled = true;
-        statusEl.classList.remove('error');
-        statusEl.textContent = "Sending…";
-
-        const formData = new FormData(form);
-        // Use no-cors mode so the fetch resolves even though the response is
-        // opaque.  We assume success and show a thank-you message regardless
-        // of the HTTP status code.
-        await fetch(FORM_ENDPOINT, {
-          method: 'POST',
-          body: formData,
-          mode: 'no-cors'
-        });
-
-        statusEl.classList.remove('error');
-        statusEl.textContent = "Thanks—your message was sent.";
-        form.reset();
-      } catch (err) {
-        // Even if the request errors (e.g. offline), display success to
-        // provide a consistent experience on static hosting.
-        statusEl.classList.remove('error');
-        statusEl.textContent = "Thanks—your message was sent.";
-        form.reset();
-      } finally {
-        submitBtn.disabled = false;
-      }
+    // Validate required fields
+    let firstInvalid = null;
+    form.querySelectorAll('[required]').forEach((input) => {
+      const field = input.closest('.field');
+      const valid = input.value.trim() !== '' && (input.type !== 'email' || /^\S+@\S+\.\S+$/.test(input.value.trim()));
+      field && field.classList.toggle('invalid', !valid);
+      if (!valid && !firstInvalid) firstInvalid = input;
     });
-  }
+    if (firstInvalid) {
+      setStatus('Please complete the highlighted fields.', true);
+      firstInvalid.focus();
+      return;
+    }
+
+    submitBtn.disabled = true;
+    setStatus('Sending…', false);
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      });
+      if (res.ok) {
+        form.reset();
+        setStatus('Thank you. Your message has been received and we will be in touch shortly.', false);
+      } else {
+        setStatus('Something went wrong sending your message. Please try again in a moment.', true);
+      }
+    } catch (err) {
+      setStatus('We could not reach the server. Please check your connection and try again.', true);
+    } finally {
+      submitBtn.disabled = false;
+    }
+  });
+
+  form.addEventListener('input', (e) => {
+    const field = e.target.closest('.field');
+    if (field) field.classList.remove('invalid');
+  });
 })();
